@@ -4,9 +4,7 @@ const APP_DIR = path.join(__dirname, "src")
 
 module.exports = {
   entry: APP_DIR + "/app.js",
-  devServer: {
-    contentBase: "./dist",
-  },
+
   output: {
     path: BUILD_DIR,
     filename: "app.bundle.js",
@@ -34,6 +32,8 @@ module.exports = {
   },
   devServer: {
     contentBase: BUILD_DIR,
+    open: true,
+    historyApiFallback: true,
     port: 9000,
   },
 }
