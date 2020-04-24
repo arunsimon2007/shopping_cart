@@ -5,6 +5,9 @@ import ShoppingList from "./routes/shopping_list"
 import ShoppingCart from "./routes/shopping_cart"
 import NoMatch from "./components/noMatch"
 
+import { Provider } from "react-redux"
+import getStore from "./redux/store"
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 import "./styles.scss"
@@ -23,7 +26,9 @@ class App extends Component {
 
 ReactDOM.render(
   <Router>
-    <App />
+    <Provider store={getStore()}>
+      <App />
+    </Provider>
   </Router>,
   document.getElementById("root")
 )
