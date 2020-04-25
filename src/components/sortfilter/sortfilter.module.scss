@@ -1,0 +1,35 @@
+.sort,
+.filter {
+  text-align: center;
+}
+
+.sort span,
+.filter span {
+  padding: 0 10px;
+}
+
+.sortFilter {
+  padding: 10px;
+}
+
+.modal {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modalBody {
+  width: 400px;
+  background-color: #fff;
+  border: solid 2px grey;
+}
+.modalBody ul {
+  list-style-type: none;
+}
+.modalButtons {
+  padding: 10px;
+  border-top: solid 1px grey;
+}
+.modalButton {
+  text-align: center;
+}

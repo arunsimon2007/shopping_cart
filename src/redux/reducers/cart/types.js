@@ -1,3 +1,5 @@
 export const GET_ALL_CART_ITEMS = "cart/GET_ALL_CART_ITEMS"
 export const ADD_CART_ITEM = "cart/ADD_CART_ITEM"
 export const REMOVE_CART_ITEM = "cart/REMOVE_CART_ITEM"
+export const INCREMENT_COUNT = "cart/INCREMENT_COUNT"
+export const DECREMENT_COUNT = "cart/DECREMENT_COUNT"

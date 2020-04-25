@@ -1,3 +1,4 @@
 import React from "react"
-const Footer = () => <p>App footer</p>
+import Grid from "@material-ui/core/Grid"
+const Footer = () => <Grid item>@copy right</Grid>
 export default Footer

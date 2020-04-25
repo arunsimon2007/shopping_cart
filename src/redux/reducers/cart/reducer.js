@@ -8,12 +8,35 @@ const cartReducer = (state = initialState, action) => {
       return state
     }
     case types.ADD_CART_ITEM: {
-      return { ...state, ...action.payload.item }
+      return state.indexOf(action.payload) == -1
+        ? [...state, action.payload]
+        : [...state]
     }
     case types.REMOVE_CART_ITEM: {
-      return {
-        ...state.items.filter((item) => item.name !== action.payload.name),
-      }
+      return [
+        ...state.slice(0, action.payload),
+        ...state.slice(action.payload + 1),
+      ]
+      return state
+    }
+
+    case types.INCREMENT_COUNT: {
+      return state.map((item, i) => {
+        if (action.payload !== i) return item
+        return {
+          ...item,
+          ...item.count++,
+        }
+      })
+    }
+    case types.DECREMENT_COUNT: {
+      return state.map((item, i) => {
+        if (action.payload !== i) return item
+        return {
+          ...item,
+          ...(item.count > 1 ? item.count-- : item.count),
+        }
+      })
     }
     default:
       return state

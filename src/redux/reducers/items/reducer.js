@@ -1,6 +1,6 @@
 import * as types from "./types"
 
-const initialState = [{ name: "Item 1" }, { name: "Item 2" }]
+const initialState = { products: [{ name: "Item 1" }, { name: "Item 2" }] }
 
 const itemReducer = (state = initialState, action) => {
   switch (action.type) {
