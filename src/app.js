@@ -28,10 +28,10 @@ class App extends Component {
 }
 
 ReactDOM.render(
-  <Router>
-    <Provider store={getStore()}>
+  <Provider store={getStore()}>
+    <Router>
       <App />
-    </Provider>
-  </Router>,
+    </Router>
+  </Provider>,
   document.getElementById("root")
 )
