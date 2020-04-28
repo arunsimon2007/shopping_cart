@@ -12,7 +12,7 @@ const Product = (props) => (
     className={"productContainer"}
   >
     <Grid item>
-      <img alt={props.name} src={props.image} width="100%" />
+      <img alt={props.name} src={props.image} height="50%" width="50%" />
     </Grid>
     <Grid item>{props.name}</Grid>
     <Grid item>
@@ -22,13 +22,15 @@ const Product = (props) => (
       <Button
         color="secondary"
         onClick={() => {
-          props.add({
-            productNo: props.productNo,
-            count: 1,
-            name: props.name,
-            image: props.image,
-            price: { actual: props.actual, display: props.display },
-          })
+          props.cartItemList.indexOf(props.productNo) == -1
+            ? props.add({
+                productNo: props.productNo,
+                count: 1,
+                name: props.name,
+                image: props.image,
+                price: { actual: props.actual, display: props.display },
+              })
+            : null
         }}
       >
         Add to Cart
@@ -48,6 +50,7 @@ Product.propTypes = {
   productNo: PropTypes.number,
   add: PropTypes.func.isRequired,
   productNo: PropTypes.number.isRequired,
+  cartItemList: PropTypes.array,
 }
 
 Product.defaultProps = {
@@ -56,5 +59,6 @@ Product.defaultProps = {
   price: {},
   discount: "",
   productNo: 0,
+  cartItemList: [],
 }
 export default Product

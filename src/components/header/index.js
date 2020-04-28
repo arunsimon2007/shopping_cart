@@ -27,6 +27,7 @@ const Header = (props) => {
             id="gsearch"
             name="gsearch"
             placeholder={" Search "}
+            autoComplete="off"
             onChange={(e) => {
               pathname === "/"
                 ? props.setSearchValueList(e.target.value)

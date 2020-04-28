@@ -1,6 +1,11 @@
 .sort,
 .filter {
   text-align: center;
+  border-bottom: solid 1px gray;
+  padding: 10px 0;
+}
+.sort {
+  border-right: solid 1px gray;
 }
 
 .sort span,
@@ -9,7 +14,7 @@
 }
 
 .sortFilter {
-  padding: 10px;
+  //padding: 10px;
 }
 
 .modal {
@@ -37,11 +42,26 @@
 
 .sliderCongainer {
   text-align: center;
-  padding: 50px 0px;
+  padding-top: 50px;
 }
 .slider {
   width: 70% !important;
 }
 .range {
   padding: 0 10px;
+}
+.priceLabel {
+  text-align: center;
+  padding-bottom: 50px;
+}
+.sortMenu li {
+  display: inline;
+  padding: 0px 10px;
+}
+
+.sortMenu li button {
+  border: none;
+}
+.sortMenu li.label {
+  font-weight: bold;
 }

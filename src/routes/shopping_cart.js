@@ -5,11 +5,23 @@ import PropTypes from "prop-types"
 import Grid from "@material-ui/core/Grid"
 import { connect } from "react-redux"
 import { cartActions } from "../redux/reducers/cart/"
+import "./shoppingCart.module.scss"
 const ShoppingCart = (props) => {
+  let data =
+    props.products &&
+    props.products.filter((product) =>
+      product.name.startsWith(props.searchWord)
+    )
   return (
-    <Grid container direction="row" justify="center" alignItems="center">
-      {props.products &&
-        props.products.map((item, i) => (
+    <Grid
+      container
+      direction="row"
+      justify="center"
+      alignItems="center"
+      className={"shoppingCart"}
+    >
+      {data &&
+        data.map((item, i) => (
           <Grid key={i} item xs={12}>
             <SelectedProduct
               index={i}
@@ -36,6 +48,7 @@ ShoppingCart.defaultProps = {
 const mapStateToProps = (state) => {
   return {
     products: state.shoppingCart,
+    searchWord: state.header.cartSearch,
   }
 }
 

@@ -4,17 +4,24 @@ import PropTypes from "prop-types"
 import "./SelectedProduct.module.scss"
 
 const SelectedProduct = (props) => (
-  <Grid container direction="row" justify="center" alignItems="center">
+  <Grid
+    container
+    direction="row"
+    justify="center"
+    alignItems="center"
+    className={"selectedProduct"}
+  >
     <Grid item xs={6}>
-      <img alt={props.name} src={props.image} width="100%" />
+      <img alt={props.name} src={props.image} width="50%" />
     </Grid>
     <Grid
       item
       xs={6}
       container
       direction="column"
-      justify="center"
-      alignItems="center"
+      justify="flex-start"
+      alignItems="stretch"
+      className={'productDetails'}
     >
       <Grid item>{props.name}</Grid>
       <Grid item>
