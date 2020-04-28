@@ -58,6 +58,11 @@
   display: inline;
   padding: 0px 10px;
 }
+.sortMenu li span.selected {
+  padding-bottom: 2px;
+  border-bottom: solid 3px blue;
+  color: blue;
+}
 
 .sortMenu li button {
   border: none;

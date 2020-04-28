@@ -15,17 +15,17 @@ const Header = (props) => {
 
   return (
     <Fragment>
-      <Grid item>
+      <Grid item xs={4} sm={8}>
         <Link to="/">
           <FontAwesomeIcon icon={faStar} size="lg" color="yellow" />
         </Link>
       </Grid>
-      <Grid item>
+      <Grid item xs={4} sm={3}>
         <form onSubmit={(e) => e.preventDefault()}>
           <input
             type="search"
-            id="gsearch"
-            name="gsearch"
+            id="search"
+            name="search"
             placeholder={" Search "}
             autoComplete="off"
             onChange={(e) => {
@@ -36,7 +36,7 @@ const Header = (props) => {
           />
         </form>
       </Grid>
-      <Grid item className={"cart"}>
+      <Grid item xs={4} className={"cart"} sm={1}>
         <Link to="/cart">
           <FontAwesomeIcon icon={faShoppingCart} size="lg" color="white" />
         </Link>

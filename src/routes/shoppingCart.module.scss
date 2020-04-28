@@ -1,4 +1,23 @@
 .shoppingCart {
   padding: 10px;
+}
+
+.shoppingCart.empty  {
+  text-align: center;
+}
+.cartInfo {
   border: solid 1px grey;
+}
+
+.cartInfo div {
+  padding: 0px 10px;
+}
+
+.cartInfo .title p {
+  font-weight: bold;
+}
+
+.cartInfo .title,
+.cartInfo .discount {
+  border-bottom: solid 1px grey;
 }

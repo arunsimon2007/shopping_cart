@@ -1,5 +1,6 @@
 .cart {
   position: relative;
+  text-align: right;
 }
 .count {
   position: absolute;
@@ -10,5 +11,7 @@
   right: 0;
   border-radius: 50%;
 }
-
+input#search{
+  width: 100%;
+}
 

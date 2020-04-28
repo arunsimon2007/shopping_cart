@@ -163,13 +163,19 @@ const SortFilter = (props) => {
             <ul className={"sortMenu"}>
               <li className={"label"}>Sort By</li>
               <li onClick={() => props.setSortValueAction("High")}>
-                Price -- High Low
+                <span className={props.sort === "High" ? "selected" : ""}>
+                  Price -- High Low
+                </span>
               </li>
               <li onClick={() => props.setSortValueAction("Low")}>
-                Price -- Low High
+                <span className={props.sort === "Low" ? "selected" : ""}>
+                  Price -- Low High
+                </span>
               </li>
               <li onClick={() => props.setSortValueAction("Discount")}>
-                Discount
+                <span className={props.sort === "Discount" ? "selected" : ""}>
+                  Discount
+                </span>
               </li>
             </ul>
           </Grid>

@@ -19,8 +19,8 @@ const ShoppingList = (props) => {
   if (props.sort && (props.sort === "High" || props.sort === "Low")) {
     dataUpdated.items =
       props.sort === "High"
-        ? dataUpdated.items.sort((a, b) => a.price.actual - b.price.actual)
-        : dataUpdated.items.sort((a, b) => b.price.actual - a.price.actual)
+        ? dataUpdated.items.sort((a, b) => b.price.actual - a.price.actual)
+        : dataUpdated.items.sort((a, b) => a.price.actual - b.price.actual)
   } else if (props.sort) {
     dataUpdated.items = dataUpdated.items.sort(
       (a, b) => a.discount - b.discount
@@ -29,7 +29,7 @@ const ShoppingList = (props) => {
 
   if (props.searchWord) {
     dataUpdated.items = dataUpdated.items.filter((item) =>
-      item.name.startsWith(props.searchWord)
+      item.name.toLowerCase().startsWith(props.searchWord.toLowerCase())
     )
   }
 
