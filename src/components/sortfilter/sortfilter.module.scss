@@ -57,6 +57,12 @@
 .sortMenu li {
   display: inline;
   padding: 0px 10px;
+  font-weight: bold;
+  color: grey;
+}
+
+.sortMenu li.label {
+  color: black;
 }
 .sortMenu li span.selected {
   padding-bottom: 2px;

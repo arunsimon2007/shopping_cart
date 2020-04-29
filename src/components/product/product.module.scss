@@ -2,3 +2,41 @@
   padding: 10px;
   border: solid 1px #c8c8c8;
 }
+.productContainer .productImage {
+  background-color: #fff;
+}
+.productContainer span {
+  text-align: center;
+}
+.productContainer .name {
+  padding: 10px 0px;
+  text-align: left;
+}
+.productContainer .button{
+  text-align: center;
+}
+.productContainer .actual,
+.productContainer .display,
+.productContainer .discount {
+  font-weight: bold;
+  padding: 0px 3px;
+}
+.productContainer .actual {
+}
+.productContainer .display {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.productContainer .discount {
+  color: green;
+}
+
+.productContainer .productImage img {
+  display: block;
+  margin: auto;
+}
+.productButton {
+  background-color: orange;
+  color: black;
+}
