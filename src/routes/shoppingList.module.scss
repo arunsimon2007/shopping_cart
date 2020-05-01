@@ -2,12 +2,12 @@
   padding-bottom: 50px;
 }
 .leftPan {
-  border-right: solid 1px grey;
+  // border-right: solid 1px grey;
   padding: 25px;
   text-align: center;
 }
 .rightPan {
-  padding: 10px;
+  padding: 0px 10px 10px;
 }
 .leftPan button {
   color: #ffffff;
@@ -17,4 +17,10 @@
   border-radius: 25px;
   padding: 5px 50px;
   box-shadow: none;
+}
+.min-max .min {
+  float: left;
+}
+.min-max .max {
+  float: right;
 }

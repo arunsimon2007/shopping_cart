@@ -12,17 +12,16 @@
   padding: 10px 0px;
   text-align: left;
 }
-.productContainer .button{
+.productContainer .button {
   text-align: center;
 }
 .productContainer .actual,
 .productContainer .display,
 .productContainer .discount {
   font-weight: bold;
-  padding: 0px 3px;
+  padding: 0px 1px;
 }
-.productContainer .actual {
-}
+
 .productContainer .display {
   text-decoration: line-through;
   color: grey;

@@ -53,7 +53,8 @@ const ShoppingList = (props) => {
         <Grid
           item
           xs={false}
-          sm={2}
+          sm={4}
+          md={2}
           container
           direction="row"
           justify="center"
@@ -62,14 +63,17 @@ const ShoppingList = (props) => {
         >
           <Grid item xs={12}>
             <h3>Filters</h3>
-
+            <div className={"min-max"}>
+              <span className={"min"}>&#8377;100</span>
+              <span className={"max"}>&#8377;100000</span>
+            </div>
             <Slider
               value={sliderValue}
               onChange={handleChange}
               aria-labelledby="continuous-slider"
               min={100}
               max={100000}
-              valueLabelDisplay="on"
+              valueLabelDisplay="off"
             />
 
             <button onClick={() => props.setFilterValue(sliderValue)}>
@@ -81,7 +85,8 @@ const ShoppingList = (props) => {
       <Grid
         item
         xs={12}
-        sm={10}
+        sm={8}
+        md={10}
         container
         direction="row"
         justify="flex-start"
@@ -90,7 +95,7 @@ const ShoppingList = (props) => {
       >
         <SortFilter />
         {dataUpdated.items.map((item, i) => (
-          <Grid key={i} item xs={6} sm={2}>
+          <Grid key={i} item xs={6} sm={4} md={2}>
             <Product
               name={item.name}
               image={item.image}
