@@ -3,38 +3,36 @@
   background-color: #fff;
   padding: 10px;
   margin-bottom: 10px;
-}
-
-.counterIncrement,
-.counterDecrement {
-  border-radius: 50%;
-  border: solid 1px gray;
-}
-.counter {
-  border: solid 1px gray;
-  padding: 0 10px;
-  margin: 0px 10px;
-}
-.productDetails {
-  padding: 0px 50px;
-}
-
-.selectedProduct div {
-  padding: 10px 10px;
-}
-.productDetails .actualPrice,
-.productDetails .displayPrice,
-.productDetails .discount {
-  font-weight: bold;
-  padding: 0 5px;
-}
-.productDetails .displayPrice {
-  color: grey;
-  text-decoration: line-through;
-}
-.productDetails .discount {
-  color: green;
-}
-.productDetails .counter {
-  font-weight: bold;
+  .counterIncrement,
+  .counterDecrement {
+    border-radius: 50%;
+    border: solid 1px gray;
+  }
+  .counter {
+    border: solid 1px gray;
+    padding: 0 10px;
+    margin: 0px 10px;
+  }
+  .productDetails {
+    padding: 0px 15px;
+  }
+  div {
+    padding: 10px 10px;
+  }
+  .productDetails .actualPrice,
+  .productDetails .displayPrice,
+  .productDetails .discount {
+    font-weight: bold;
+    padding: 0 5px;
+  }
+  .productDetails .displayPrice {
+    color: grey;
+    text-decoration: line-through;
+  }
+  .productDetails .discount {
+    color: green;
+  }
+  .productDetails .counter {
+    font-weight: bold;
+  }
 }

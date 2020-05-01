@@ -11,8 +11,6 @@ import getStore from "./redux/store"
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
-import "./styles.scss"
-
 class App extends Component {
   render() {
     return (
