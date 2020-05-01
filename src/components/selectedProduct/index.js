@@ -2,16 +2,21 @@ import React from "react"
 import { Grid, Button } from "@material-ui/core"
 import PropTypes from "prop-types"
 import { makeStyles } from "@material-ui/core/styles"
+import { useTheme } from "@material-ui/core/styles"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
 import "./SelectedProduct.module.scss"
 
 const useStyles = makeStyles({
   buttonStyle: {
     padding: "0px",
+    fontWeight:"bold"
   },
 })
 
 const SelectedProduct = (props) => {
   const classes = useStyles()
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.up("sm"))
 
   return (
     <Grid
@@ -22,7 +27,11 @@ const SelectedProduct = (props) => {
       className={"selectedProduct"}
     >
       <Grid item xs={4}>
-        <img alt={props.name} src={props.image} width="100%" />
+        <img
+          alt={props.name}
+          src={props.image}
+          width={matches ? "30%" : "100%"}
+        />
       </Grid>
       <Grid
         item
@@ -37,7 +46,9 @@ const SelectedProduct = (props) => {
           {props.name}
         </Grid>
         <Grid item xs={12} sm={4}>
-          {props.price.actual}-{props.price.display}
+          <span className={"actualPrice"}>{props.price.actual}</span>
+          <span className={"displayPrice"}>{props.price.display}</span>
+          <span className={"discount"}>{props.discount}%off</span>
         </Grid>
         <Grid item xs={12} sm={4}>
           <button

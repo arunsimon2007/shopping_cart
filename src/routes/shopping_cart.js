@@ -51,6 +51,7 @@ const ShoppingCart = (props) => {
                   name={item.name}
                   image={item.image}
                   price={item.price}
+                  discount={item.discount}
                   remove={props.removeFromCart}
                   count={item.count}
                   increment={props.incrmentCount}
@@ -64,22 +65,20 @@ const ShoppingCart = (props) => {
         <Grid item xs={12} sm={4}>
           <Grid container className={"cartInfo"}>
             <Grid item xs={12} className={"title"}>
-              <p>PRICE DETAILS</p>
+              <span>PRICE DETAILS</span>
             </Grid>
-            <Grid item xs={12}>
-              <p>
-                Price item {`(${priceDetails.totalCount})`}:
-                {priceDetails.totalDisplay}
-              </p>
+            <Grid item xs={12} className={"priceItem"}>
+              <span>Price item {`(${priceDetails.totalCount})`} :</span>
+
+              <span>{priceDetails.totalDisplay}</span>
             </Grid>
             <Grid item xs={12} className={"discount"}>
-              <p>Discount: {priceDetails.totalDiscount}</p>
+              <span>Discount :</span> <span>{priceDetails.totalDiscount}</span>
             </Grid>
-            <Grid item xs={12}>
-              <p>
-                Total Payable:
-                {priceDetails.totalActual}
-              </p>
+            <Grid item xs={12} className={"totalPayable"}>
+              <span>Total Payable :</span>
+
+              <span>{priceDetails.totalActual}</span>
             </Grid>
           </Grid>
         </Grid>

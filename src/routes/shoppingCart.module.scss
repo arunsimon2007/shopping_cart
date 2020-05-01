@@ -2,22 +2,56 @@
   padding: 10px;
 }
 
-.shoppingCart.empty  {
+.shoppingCart.empty {
   text-align: center;
 }
 .cartInfo {
   border: solid 1px grey;
+  background-color: #fff;
+}
+.cartInfo span {
+  color: grey;
 }
 
 .cartInfo div {
-  padding: 0px 10px;
+  padding: 10px 10px;
 }
 
-.cartInfo .title p {
+.cartInfo .title {
   font-weight: bold;
 }
 
 .cartInfo .title,
 .cartInfo .discount {
   border-bottom: solid 1px grey;
+}
+.priceItem > span:first-child {
+  font-weight: bold;
+  float: left;
+}
+.priceItem > span:last-child {
+  font-weight: bold;
+  float: right;
+}
+
+.discount > span:first-child {
+  font-weight: bold;
+  float: left;
+}
+.discount > span:last-child {
+  font-weight: bold;
+  float: right;
+}
+
+.totalPayable span{
+   color: #000;
+}
+
+.totalPayable > span:first-child {
+  font-weight: bold;
+  float: left;
+}
+.totalPayable > span:last-child {
+  font-weight: bold;
+  float: right;
 }

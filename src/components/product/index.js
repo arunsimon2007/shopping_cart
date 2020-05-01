@@ -35,7 +35,7 @@ const Product = (props) => {
         <span className={"display"}>{props.display}</span>
         <span className={"discount"}>{props.discount}%off</span>
       </Grid>
-      <Grid item className={'button'}>
+      <Grid item className={"button"}>
         <Button
           className={classes.productButton}
           onClick={() => {
@@ -46,6 +46,7 @@ const Product = (props) => {
                   name: props.name,
                   image: props.image,
                   price: { actual: props.actual, display: props.display },
+                  discount: props.discount,
                 })
               : null
           }}
