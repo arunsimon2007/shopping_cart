@@ -39,8 +39,9 @@ const Header = (props) => {
       <Grid item xs={4} className={"cart"} sm={1}>
         <Link to="/cart">
           <FontAwesomeIcon icon={faShoppingCart} size="lg" color="white" />
+
+          <div className={"count"}>{props.selectedProducts.length}</div>
         </Link>
-        <div className={"count"}>{props.selectedProducts.length}</div>
       </Grid>
     </Fragment>
   )
