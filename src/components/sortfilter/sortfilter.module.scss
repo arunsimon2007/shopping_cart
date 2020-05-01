@@ -1,11 +1,13 @@
+@import "../../_colors.scss";
+
 .sort,
 .filter {
   text-align: center;
-  border-bottom: solid 1px gray;
+  border-bottom: solid 1px $grey;
   padding: 10px 0;
 }
 .sort {
-  border-right: solid 1px gray;
+  border-right: solid 1px $grey;
 }
 
 .sort span,
@@ -21,8 +23,8 @@
 }
 .modalBody {
   width: 400px;
-  background-color: #fff;
-  border: solid 2px grey;
+  background-color: $white;
+  border: solid 2px $grey;
   padding: 10px;
 }
 .modalBody ul {
@@ -30,7 +32,7 @@
 }
 .modalButtons {
   padding: 10px;
-  border-top: solid 1px grey;
+  border-top: solid 1px $grey;
 }
 .modalButton {
   text-align: center;
@@ -54,16 +56,16 @@
   display: inline;
   padding: 0px 10px;
   font-weight: bold;
-  color: grey;
+  color: $grey;
 }
 
 .sortMenu li.label {
-  color: black;
+  color: $black;
 }
 .sortMenu li span.selected {
   padding-bottom: 2px;
-  border-bottom: solid 3px blue;
-  color: blue;
+  border-bottom: solid 3px $blue;
+  color: $blue;
 }
 
 .sortMenu li button {

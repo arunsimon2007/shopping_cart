@@ -1,8 +1,10 @@
+@import "../../_colors.scss";
+
 .productContainer {
   padding: 10px;
-  border: solid 1px #c8c8c8;
+  border: solid 1px $darkGrey;
   .productImage {
-    background-color: #fff;
+    background-color: $white;
   }
   span {
     text-align: center;
@@ -22,17 +24,17 @@
   }
   .display {
     text-decoration: line-through;
-    color: grey;
+    color: $grey;
   }
   .discount {
-    color: green;
+    color: $green;
   }
   .productImage img {
     display: block;
     margin: auto;
   }
   .productButton {
-    background-color: orange;
-    color: black;
+    background-color: $orange;
+    color: $black;
   }
 }

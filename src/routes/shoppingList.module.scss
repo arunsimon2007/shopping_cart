@@ -1,3 +1,5 @@
+@import "../colors";
+
 .leftPan h3 {
   padding-bottom: 50px;
 }
@@ -9,9 +11,9 @@
   padding: 0px 10px 10px;
 }
 .leftPan button {
-  color: #ffffff;
+  color: $white;
   font-weight: bold;
-  background-color: blue;
+  background-color: $blue;
   border: none;
   border-radius: 25px;
   padding: 5px 50px;

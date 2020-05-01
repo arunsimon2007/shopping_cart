@@ -1,13 +1,15 @@
+@import "../../_colors.scss";
+
 .layout {
   padding: 0px;
   margin: 0px;
-  background-color: #f4f5f7;
+  background-color: $lightGrey;
   .headerContainer {
     padding: 10px;
-    background-color: blue;
+    background-color: $blue;
   }
   .footerContainer {
-    background-color: blue;
+    background-color: $blue;
   }
   .contentContainer {
     min-height: 100vh;

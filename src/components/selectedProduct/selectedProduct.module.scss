@@ -1,15 +1,17 @@
+@import "../../_colors.scss";
+
 .selectedProduct {
-  border: solid 1px grey;
-  background-color: #fff;
+  border: solid 1px $grey;
+  background-color: $white;
   padding: 10px;
   margin-bottom: 10px;
   .counterIncrement,
   .counterDecrement {
     border-radius: 50%;
-    border: solid 1px gray;
+    border: solid 1px $grey;
   }
   .counter {
-    border: solid 1px gray;
+    border: solid 1px $grey;
     padding: 0 10px;
     margin: 0px 10px;
   }
@@ -26,11 +28,11 @@
     padding: 0 5px;
   }
   .productDetails .displayPrice {
-    color: grey;
+    color: $grey;
     text-decoration: line-through;
   }
   .productDetails .discount {
-    color: green;
+    color: $green;
   }
   .productDetails .counter {
     font-weight: bold;

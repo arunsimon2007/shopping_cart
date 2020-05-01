@@ -1,17 +1,20 @@
+@import "../../_colors.scss";
+
 .cart {
   position: relative;
   text-align: right;
 }
 .count {
   position: absolute;
-  background-color: red;
-  color: #fff;
+  background-color: $red;
+  color: $white;
   top: -10px;
   padding: 2px;
   right: 0;
   border-radius: 50%;
+  width: 1em;
+  text-align: center;
 }
-input#search{
+input#search {
   width: 100%;
 }
-
