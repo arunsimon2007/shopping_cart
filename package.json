@@ -11,6 +11,7 @@
     "npm": "6.4.1"
   },
   "scripts": {
+    "heroku-prebuild": "npm install --dev",
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
