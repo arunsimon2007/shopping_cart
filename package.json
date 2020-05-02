@@ -6,6 +6,10 @@
   "author": "Arun Sasthrampadi",
   "license": "MIT",
   "devtool": "inline-source-map",
+  "engines": {
+    "node": "10.14.1",
+    "npm": "6.4.1"
+  },
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
