@@ -103,6 +103,7 @@ const ShoppingList = (props) => {
               actual={item.price.actual}
               display={item.price.display}
               add={props.addtoCart}
+              incrmentCount={props.incrmentCount}
               cartItemList={cartItemList}
               productNo={i}
             />
@@ -122,6 +123,7 @@ const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps, {
+  incrmentCount: cartActions.incrementCount,
   addtoCart: cartActions.addCartItem,
   setFilterValue: sortFilterActions.setFilterValue,
 })(ShoppingList)

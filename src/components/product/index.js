@@ -48,7 +48,7 @@ const Product = (props) => {
                   price: { actual: props.actual, display: props.display },
                   discount: props.discount,
                 })
-              : null
+              : props.incrmentCount(props.productNo)
           }}
         >
           Add to Cart
@@ -68,6 +68,7 @@ Product.propTypes = {
   discount: PropTypes.number,
   productNo: PropTypes.number,
   add: PropTypes.func.isRequired,
+  incrmentCount: PropTypes.func.isRequired,
   productNo: PropTypes.number.isRequired,
   cartItemList: PropTypes.array,
 }
