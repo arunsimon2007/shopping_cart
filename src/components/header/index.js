@@ -12,6 +12,8 @@ import { faStar, faShoppingCart } from "@fortawesome/free-solid-svg-icons"
 
 const Header = (props) => {
   let { pathname } = useLocation()
+  let count = 0
+  props.selectedProducts.forEach((product) => (count = product.count + count))
 
   return (
     <Fragment>
@@ -40,7 +42,7 @@ const Header = (props) => {
         <Link to="/cart">
           <FontAwesomeIcon icon={faShoppingCart} size="lg" color="white" />
 
-          <div className={"count"}>{props.selectedProducts.length}</div>
+          <div className={"count"}>{count}</div>
         </Link>
       </Grid>
     </Fragment>

@@ -1,6 +1,8 @@
 const path = require("path")
 const BUILD_DIR = path.join(__dirname, "dist")
 const APP_DIR = path.join(__dirname, "src")
+const { CleanWebpackPlugin } = require("clean-webpack-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 module.exports = {
   entry: APP_DIR + "/app.js",
@@ -30,10 +32,8 @@ module.exports = {
       },
     ],
   },
-  devServer: {
-    contentBase: BUILD_DIR,
-    open: true,
-    historyApiFallback: true,
-    port: 9000,
-  },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({ template: "./src/index.html" }),
+  ],
 }
