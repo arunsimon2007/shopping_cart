@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import { makeStyles } from "@material-ui/core/styles"
 import { useTheme } from "@material-ui/core/styles"
 import useMediaQuery from "@material-ui/core/useMediaQuery"
-import "./SelectedProduct.module.scss"
+import "./selectedProduct.module.scss"
 
 const useStyles = makeStyles({
   buttonStyle: {
